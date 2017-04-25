@@ -1,0 +1,63 @@
+{
+    "general": {
+        "serviceProviderNameSpace": "HCApps"
+    },
+    "formData": {
+        "apps": "interactivesolutions\\honeycombapps\\app\\forms\\HCAppsForm",
+        "apps-tokens": "interactivesolutions\\honeycombapps\\app\\forms\\apps\\HCAppsTokensForm"
+    },
+    "adminMenu": [
+        {
+            "path": "admin\/apps",
+            "translation": "HCApps::apps.page_title",
+            "icon": "fa-microchip",
+            "aclPermission": "interactivesolutions_honeycomb_apps_apps_list",
+            "children":[
+                {
+                    "path": "admin\/apps\/tokens",
+                    "translation": "HCApps::apps_tokens.page_title",
+                    "icon": "fa-key",
+                    "aclPermission": "interactivesolutions_honeycomb_apps_apps_tokens_list"
+                }
+            ]
+        }
+    ],
+    "acl": {
+        "permissions": [
+            {
+                "name": "admin.apps",
+                "controller": "interactivesolutions\\honeycombapps\\app\\http\\controllers\\HCAppsController",
+                "actions": [
+                    "interactivesolutions_honeycomb_apps_apps_list",
+                    "interactivesolutions_honeycomb_apps_apps_create",
+                    "interactivesolutions_honeycomb_apps_apps_update",
+                    "interactivesolutions_honeycomb_apps_apps_delete",
+                    "interactivesolutions_honeycomb_apps_apps_force_delete"
+                ]
+            },
+            {
+                "name": "admin.apps.tokens",
+                "controller": "interactivesolutions\\honeycombapps\\app\\http\\controllers\\apps\\HCAppsTokensController",
+                "actions": [
+                    "interactivesolutions_honeycomb_apps_apps_tokens_list",
+                    "interactivesolutions_honeycomb_apps_apps_tokens_create",
+                    "interactivesolutions_honeycomb_apps_apps_tokens_update",
+                    "interactivesolutions_honeycomb_apps_apps_tokens_delete",
+                    "interactivesolutions_honeycomb_apps_apps_tokens_force_delete"
+                ]
+            }
+        ],
+        "rolesActions": {
+            "project-admin": [
+                "interactivesolutions_honeycomb_apps_apps_list",
+                "interactivesolutions_honeycomb_apps_apps_create",
+                "interactivesolutions_honeycomb_apps_apps_update",
+                "interactivesolutions_honeycomb_apps_apps_delete",
+                "interactivesolutions_honeycomb_apps_apps_tokens_list",
+                "interactivesolutions_honeycomb_apps_apps_tokens_create",
+                "interactivesolutions_honeycomb_apps_apps_tokens_update",
+                "interactivesolutions_honeycomb_apps_apps_tokens_delete"
+            ]
+        }
+    }
+}

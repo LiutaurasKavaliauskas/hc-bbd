@@ -1,0 +1,15 @@
+{
+    "directory": "interactivesolutions/honeycomb-regions",
+    "serviceURL": "regions/municipalities",
+    "serviceName": "HCMunicipalities",
+    "serviceIcon": "fa-globe",
+    "generateMigrations": 1,
+    "multiLanguage": 0,
+    "database": [
+        {
+            "tableName":"hc_regions_municipalities",
+            "modelName":"Municipalities",
+            "default":1
+        }
+    ]
+}

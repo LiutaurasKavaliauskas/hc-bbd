@@ -1,0 +1,10 @@
+<!-- Content 3 -->
+<section id="about" class="content content-3">
+    <div class="container">
+        <h2 class="section-header"><span class="glyphicon glyphicon-pushpin text-primary"></span><br>{about_section_title}</h2>
+        <p class="lead text-muted">{about_section_summary}</p>
+        {is_button}
+
+    </div>
+    </div>
+</section>

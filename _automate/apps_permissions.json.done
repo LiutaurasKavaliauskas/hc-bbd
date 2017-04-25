@@ -1,0 +1,16 @@
+{
+    "directory":"interactivesolutions/honeycomb-apps",
+    "serviceURL":"apps/permissions",
+    "serviceName":"Permissions",
+    "serviceIcon":"fa-gavel",
+    "generateMigrations":1,
+    "multiLanguage":0,
+    "database":
+    [
+        {
+            "tableName":"hc_apps_acl_permissions",
+            "modelName":"Permissions",
+            "default":1
+        }
+    ]
+}

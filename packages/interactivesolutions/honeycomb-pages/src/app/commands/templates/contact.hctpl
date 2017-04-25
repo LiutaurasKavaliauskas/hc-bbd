@@ -1,0 +1,10 @@
+<!-- Contact Us -->
+<section id="contacts">
+    <div class="contact">
+        <div class="container">
+            <h2 class="section-heading">{contact_section_title}</h2>
+            <p><span class="glyphicon glyphicon-earphone"></span><br>{contact_section_number}</p>
+            <p><span class="glyphicon glyphicon-envelope"></span><br>{contact_section_email}</p>
+        </div>
+    </div>
+</section>

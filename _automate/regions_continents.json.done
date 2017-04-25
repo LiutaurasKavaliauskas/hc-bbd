@@ -1,0 +1,18 @@
+{
+    "directory": "interactivesolutions/HCTESTAS",
+    "serviceURL": "regions/continents",
+    "serviceName": "HCContinents",
+    "serviceIcon": "fa-globe",
+    "generateMigrations": 1,
+    "multiLanguage": 1,
+    "database": [
+        {
+            "tableName": "hc_regions_continents",
+            "modelName": "HCContinents",
+            "default": 1,
+            "multiLanguage": {
+                "tableName": "hc_pages_translations"
+            }
+        }
+    ]
+}

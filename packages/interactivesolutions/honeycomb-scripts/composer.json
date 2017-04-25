@@ -1,0 +1,33 @@
+{
+  "name": "interactivesolutions/honeycomb-scripts",
+  "description": "HoneyComb CMS scripts package",
+  "keywords": ["honeycomb", "honey", "laravel", "scripts", "automation"],
+  "license": "MIT",
+  "repositries" : [],
+  "authors": [
+    {
+      "name": "Jevgenij Dmitrijev",
+      "email": "jd@interactivesolutions.lt"
+    },
+    {
+      "name": "Mantas Gelčius",
+      "email": "mantas.gelcius@gmail.com"
+    },
+    {
+      "name": "Liutauras Kavaliauskas",
+      "email": "liutauraskav@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0",
+    "laravel\/framework": "5.3.*",
+    "nette\/reflection": "^2.4",
+    "xethron\/migrations-generator": "^2.0",
+    "interactivesolutions/honeycomb-languages/": "~0.1.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "interactivesolutions\\honeycombscripts\\": "src/"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+    "directory":"interactivesolutions/HCTESTAS",
+    "serviceURL":"test",
+    "serviceName":"Test",
+    "serviceIcon":"fa-cubes",
+    "generateMigrations":1,
+    "multiLanguage":1,
+    "database":
+    [
+        {
+            "tableName":"hc_apps",
+            "modelName":"App",
+            "default":1,
+            "multiLanguage":
+            {
+                "tableName": "hc_pages_translations"
+            }
+        }
+    ]
+}

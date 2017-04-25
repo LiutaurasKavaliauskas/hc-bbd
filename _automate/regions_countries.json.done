@@ -1,0 +1,19 @@
+{
+    "directory": "interactivesolutions/honeycomb-regions",
+    "serviceURL": "regions/countries",
+    "serviceName": "HCCountries",
+    "serviceIcon": "fa-map-o",
+    "generateMigrations": 1,
+    "multiLanguage": 0,
+    "database": [
+        {
+            "tableName":"hc_regions_countries",
+            "modelName":"HCCountries",
+            "default":1
+        },
+        {
+            "tableName":"hc_regions_countries_languages_connections",
+            "modelName":"HCCountriesLanguagesConnections"
+        }
+    ]
+}

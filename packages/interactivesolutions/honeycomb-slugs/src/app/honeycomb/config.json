@@ -1,0 +1,44 @@
+{
+  "general": {
+    "serviceProviderNameSpace": "HCSlugs"
+  },
+  "formData": {},
+  "adminMenu": [
+    {
+      "path": "admin\/slugs",
+      "translation": "HCSlugs::slugs.page_title",
+      "icon": "fa-link",
+      "aclPermission": "interactivesolutions_honeycomb_slugs_slugs_list"
+    }
+  ],
+  "acl": {
+    "permissions": [
+      {
+        "name": "admin.slugs",
+        "controller": "interactivesolutions\\honeycombslugs\\http\\controllers\\HCSlugsController",
+        "actions": [
+          "interactivesolutions_honeycomb_slugs_slugs_list",
+          "interactivesolutions_honeycomb_slugs_slugs_create",
+          "interactivesolutions_honeycomb_slugs_slugs_update",
+          "interactivesolutions_honeycomb_slugs_slugs_delete",
+          "interactivesolutions_honeycomb_slugs_slugs_force_delete"
+        ],
+        "actionsApps": [
+          "interactivesolutions_honeycomb_slugs_slugs_list",
+          "interactivesolutions_honeycomb_slugs_slugs_create",
+          "interactivesolutions_honeycomb_slugs_slugs_update",
+          "interactivesolutions_honeycomb_slugs_slugs_delete",
+          "interactivesolutions_honeycomb_slugs_slugs_force_delete"
+        ]
+      }
+    ],
+    "rolesActions": {
+      "project-admin": [
+        "interactivesolutions_honeycomb_slugs_slugs_list",
+        "interactivesolutions_honeycomb_slugs_slugs_create",
+        "interactivesolutions_honeycomb_slugs_slugs_update",
+        "interactivesolutions_honeycomb_slugs_slugs_delete"
+      ]
+    }
+  }
+}

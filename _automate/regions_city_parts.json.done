@@ -1,0 +1,20 @@
+{
+    "directory": "interactivesolutions/honeycomb-regions",
+    "serviceURL": "regions/cityparts",
+    "serviceName": "HCCityParts",
+    "serviceIcon": "fa-globe",
+    "generateMigrations": 1,
+    "multiLanguage": 0,
+    "database": [
+        {
+            "tableName":"hc_regions_city_parts",
+            "modelName":"CityParts",
+            "default":1
+        },
+        {
+            "tableName":"hc_regions_city_parts_streets_connections",
+            "modelName":"CityPartsStreetsConnections",
+            "default":1
+        }
+    ]
+}

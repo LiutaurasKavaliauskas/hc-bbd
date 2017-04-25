@@ -1,0 +1,15 @@
+{
+    "directory": "interactivesolutions/honeycomb-regions",
+    "serviceURL": "regions/cities",
+    "serviceName": "HCCities",
+    "serviceIcon": "fa-building-o",
+    "generateMigrations": 1,
+    "multiLanguage": 0,
+    "database": [
+        {
+            "tableName":"hc_regions_cities",
+            "modelName":"HCCities",
+            "default":1
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "directory":"interactivesolutions/honeycomb-countries",
+    "serviceURL":"HCCountries",
+    "serviceName":"HCCountries",
+    "serviceIcon":"",
+    "generateMigrations":1,
+    "multiLanguage":0,
+    "database":
+    [
+        {
+            "tableName":"hc_countries",
+            "modelName":"Countries",
+            "default":1
+        },
+        {
+            "tableName":"hc_countries_languages_connections",
+            "modelName":"CountriesLanguagesConnections",
+            "default":1
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "name": "interactivesolutions/honeycomb-regions",
+    "description": "HoneyComb regions package. World continents, countries, cities, municipalities, city parts, streets. Availability to read, create and update.",
+    "keywords": ["HoneyComb", "package", "world", "regions", "continents", "cities", "municipalities", "city parts", "streets"],
+    "homepage": "https://github.com/interactivesolutions/honeycomb-regions/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jevgenij Dmitrijev",
+            "email": "jd@interactivesolutions.lt"
+        },
+        {
+            "name": "Mantas Gelčius",
+            "email": "mantas.gelcius@gmail.com"
+        },
+        {
+            "name": "Liutauras Kavaliauskas",
+            "email": "liutauraskav@gmail.com"
+        }
+    ],
+    "repositories": [],
+    "require": {
+        "php": ">=7.0.0",
+        "laravel/framework": "5.3.*",
+        "rinvex\/country": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "interactivesolutions\\honeycombregions\\": "src/"
+        }
+    }
+}

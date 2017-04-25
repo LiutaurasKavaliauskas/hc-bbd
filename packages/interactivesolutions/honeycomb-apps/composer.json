@@ -1,0 +1,19 @@
+{
+    "name": "interactivesolutions/honeycomb-apps",
+    "description": "",
+    "keywords": [],
+    "license": "MIT",
+    "authors": [],
+    "repositories": [],
+    "require": {
+        "php": ">=7.0.0",
+        "laravel/framework": "5.3.*",
+        "interactivesolutions/honeycomb-scripts":"~0.1.6",
+        "interactivesolutions/honeycomb-languages/": "~0.1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "interactivesolutions\\honeycombapps\\": "src/"
+        }
+    }
+}

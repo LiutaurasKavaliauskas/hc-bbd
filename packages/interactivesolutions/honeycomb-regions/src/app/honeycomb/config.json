@@ -1,0 +1,164 @@
+{
+  "general": {
+    "serviceProviderNameSpace": "HCRegions"
+  },
+  "formData": {
+    "regions-countries": "interactivesolutions\\honeycombregions\\app\\forms\\regions\\HCCountriesForm",
+    "regions-municipalities": "interactivesolutions\\honeycombregions\\app\\forms\\regions\\HCMunicipalitiesForm",
+    "regions-cities": "interactivesolutions\\honeycombregions\\app\\forms\\regions\\HCCitiesForm",
+    "regions-parts": "interactivesolutions\\honeycombregions\\app\\forms\\regions\\HCCityPartsForm",
+    "regions-streets": "interactivesolutions\\honeycombregions\\app\\forms\\regions\\HCStreetsForm"
+  },
+  "adminMenu": [
+    {
+      "path": "admin\/regions\/continents",
+      "translation": "HCRegions::regions.page_title",
+      "listTranslation": "HCRegions::regions_continents.page_title",
+      "icon": "fa-globe",
+      "listIcon": "fa-flag",
+      "aclPermission": "interactivesolutions_honeycomb_regions_regions_continents_list",
+      "children": [
+        {
+          "path": "admin\/regions\/countries",
+          "translation": "HCRegions::regions_countries.page_title",
+          "icon": "fa-map-o",
+          "aclPermission": "interactivesolutions_honeycomb_regions_regions_countries_list"
+        },
+        {
+          "path": "admin\/regions\/municipalities",
+          "translation": "HCRegions::regions_municipalities.page_title",
+          "icon": "fa-globe",
+          "aclPermission": "interactivesolutions_honeycomb_regions_regions_municipalities_list"
+        },
+        {
+          "path": "admin\/regions\/cities",
+          "translation": "HCRegions::regions_cities.page_title",
+          "icon": "fa-building-o",
+          "aclPermission": "interactivesolutions_honeycomb_regions_regions_cities_list"
+        },
+        {
+          "path": "admin\/regions\/parts",
+          "translation": "HCRegions::regions_parts.page_title",
+          "icon": "fa-circle-thin",
+          "aclPermission": "interactivesolutions_honeycomb_regions_regions_parts_list"
+        },
+        {
+          "path": "admin\/regions\/streets",
+          "translation": "HCRegions::regions_streets.page_title",
+          "icon": "fa-road",
+          "aclPermission": "interactivesolutions_honeycomb_regions_regions_streets_list"
+        }
+      ]
+    }
+  ],
+  "acl": {
+    "permissions": [
+      {
+        "name": "admin.regions.continents",
+        "controller": "interactivesolutions\\honeycombregions\\app\\http\\controllers\\regions\\HCContinentsController",
+        "actions": [
+          "interactivesolutions_honeycomb_regions_regions_continents_list"
+        ],
+        "actionsApps": [
+          "interactivesolutions_honeycomb_regions_regions_continents_list"
+        ]
+      },
+      {
+        "name": "admin.regions.countries",
+        "controller": "interactivesolutions\\honeycombregions\\app\\http\\controllers\\regions\\HCCountriesController",
+        "actions": [
+          "interactivesolutions_honeycomb_regions_regions_countries_list",
+          "interactivesolutions_honeycomb_regions_regions_countries_update"
+        ],
+        "actionsApps": [
+          "interactivesolutions_honeycomb_regions_regions_countries_list",
+          "interactivesolutions_honeycomb_regions_regions_countries_update"
+        ]
+      },
+      {
+        "name": "admin.regions.municipalities",
+        "controller": "interactivesolutions\\honeycombregions\\app\\http\\controllers\\regions\\HCMunicipalitiesController",
+        "actions": [
+          "interactivesolutions_honeycomb_regions_regions_municipalities_list"
+        ],
+        "actionsApps": [
+          "interactivesolutions_honeycomb_regions_regions_municipalities_list"
+        ]
+      },
+      {
+        "name": "admin.regions.cities",
+        "controller": "interactivesolutions\\honeycombregions\\app\\http\\controllers\\regions\\HCCitiesController",
+        "actions": [
+          "interactivesolutions_honeycomb_regions_regions_cities_list",
+          "interactivesolutions_honeycomb_regions_regions_cities_create",
+          "interactivesolutions_honeycomb_regions_regions_cities_update",
+          "interactivesolutions_honeycomb_regions_regions_cities_delete",
+          "interactivesolutions_honeycomb_regions_regions_cities_force_delete"
+        ],
+        "actionsApps": [
+          "interactivesolutions_honeycomb_regions_regions_cities_list",
+          "interactivesolutions_honeycomb_regions_regions_cities_create",
+          "interactivesolutions_honeycomb_regions_regions_cities_update",
+          "interactivesolutions_honeycomb_regions_regions_cities_delete",
+          "interactivesolutions_honeycomb_regions_regions_cities_force_delete"
+        ]
+      },
+      {
+        "name": "admin.regions.parts",
+        "controller": "interactivesolutions\\honeycombregions\\app\\http\\controllers\\regions\\HCCityPartsController",
+        "actions": [
+          "interactivesolutions_honeycomb_regions_regions_parts_list",
+          "interactivesolutions_honeycomb_regions_regions_parts_create",
+          "interactivesolutions_honeycomb_regions_regions_parts_update",
+          "interactivesolutions_honeycomb_regions_regions_parts_delete",
+          "interactivesolutions_honeycomb_regions_regions_parts_force_delete"
+        ],
+        "actionsApps": [
+          "interactivesolutions_honeycomb_regions_regions_parts_list",
+          "interactivesolutions_honeycomb_regions_regions_parts_create",
+          "interactivesolutions_honeycomb_regions_regions_parts_update",
+          "interactivesolutions_honeycomb_regions_regions_parts_delete",
+          "interactivesolutions_honeycomb_regions_regions_parts_force_delete"
+        ]
+      },
+      {
+        "name": "admin.regions.streets",
+        "controller": "interactivesolutions\\honeycombregions\\app\\http\\controllers\\regions\\HCStreetsController",
+        "actions": [
+          "interactivesolutions_honeycomb_regions_regions_streets_list",
+          "interactivesolutions_honeycomb_regions_regions_streets_create",
+          "interactivesolutions_honeycomb_regions_regions_streets_update",
+          "interactivesolutions_honeycomb_regions_regions_streets_delete",
+          "interactivesolutions_honeycomb_regions_regions_streets_force_delete"
+        ],
+        "actionsApps": [
+          "interactivesolutions_honeycomb_regions_regions_streets_list",
+          "interactivesolutions_honeycomb_regions_regions_streets_create",
+          "interactivesolutions_honeycomb_regions_regions_streets_update",
+          "interactivesolutions_honeycomb_regions_regions_streets_delete",
+          "interactivesolutions_honeycomb_regions_regions_streets_force_delete"
+        ]
+      }
+    ],
+    "rolesActions": {
+      "project-admin": [
+        "interactivesolutions_honeycomb_regions_regions_continents_list",
+        "interactivesolutions_honeycomb_regions_regions_countries_list",
+        "interactivesolutions_honeycomb_regions_regions_countries_update",
+        "interactivesolutions_honeycomb_regions_regions_municipalities_list",
+        "interactivesolutions_honeycomb_regions_regions_cities_list",
+        "interactivesolutions_honeycomb_regions_regions_cities_create",
+        "interactivesolutions_honeycomb_regions_regions_cities_update",
+        "interactivesolutions_honeycomb_regions_regions_cities_delete",
+        "interactivesolutions_honeycomb_regions_regions_parts_list",
+        "interactivesolutions_honeycomb_regions_regions_parts_create",
+        "interactivesolutions_honeycomb_regions_regions_parts_update",
+        "interactivesolutions_honeycomb_regions_regions_parts_delete",
+        "interactivesolutions_honeycomb_regions_regions_streets_list",
+        "interactivesolutions_honeycomb_regions_regions_streets_create",
+        "interactivesolutions_honeycomb_regions_regions_streets_update",
+        "interactivesolutions_honeycomb_regions_regions_streets_delete"
+      ]
+    }
+  }
+}

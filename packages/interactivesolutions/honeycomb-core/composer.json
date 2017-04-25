@@ -1,0 +1,30 @@
+{
+  "name": "interactivesolutions/honeycomb-core",
+  "description": "HoneyComb CMS package for backend elements",
+  "keywords": ["honeycomb", "honey", "laravel"],
+  "homepage": "https://github.com/interactivesolutions/honeycomb-core/",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mantas Paulauskas",
+      "email": "mp@interactivesolutions.lt"
+    },
+    {
+      "name": "Jevgenij Dmitrijev",
+      "email": "jd@interactivesolutions.lt"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0",
+    "laravel\/framework": "5.3.*",
+    "ramsey\/uuid": "^3.5",
+    "jenssegers/rollbar": "*",
+    "rap2hpoutre/laravel-log-viewer": "*",
+    "spatie/laravel-cookie-consent": "1.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "interactivesolutions\\honeycombcore\\": "src/"
+    }
+  }
+}

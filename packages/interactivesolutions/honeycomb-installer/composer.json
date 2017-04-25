@@ -1,0 +1,23 @@
+{
+  "name": "interactivesolutions/honeycomb-installer",
+  "description": "HoneyComb CMS installer",
+  "keywords": [
+    "honeycomb"
+  ],
+  "type": "composer-plugin",
+  "license": "MIT",
+  "authors": [],
+  "repositories": [],
+  "require": {
+    "php": ">=7.0.0",
+    "composer-plugin-api": "^1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "interactivesolutions\\honeycombinstaller\\": "src/"
+    }
+  },
+  "extra": {
+    "class": "src\\console\\commands\\HCInstall"
+  }
+}

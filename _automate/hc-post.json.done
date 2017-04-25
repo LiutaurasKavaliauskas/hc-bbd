@@ -1,0 +1,24 @@
+{
+    "directory":"interactivesolutions/honeycomb-posts",
+    "serviceURL":"posts",
+    "serviceName":"HCPosts",
+    "serviceIcon":"",
+    "generateMigrations":1,
+    "multiLanguage":1,
+    "database":
+    [
+        {
+            "tableName":"hc_posts",
+            "modelName":"HCPosts",
+            "default":1,
+            "multiLanguage":
+            {
+                "tableName": "hc_posts_translations"
+            }
+        },
+        {
+            "tableName":"hc_posts_galleries_connections",
+            "modelName":"HCPotsGalleriesConnections"
+        }
+    ]
+}

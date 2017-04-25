@@ -1,0 +1,55 @@
+{
+    "general": {
+        "serviceProviderNameSpace": "HCPages"
+    },
+    "formData": {
+        "pages": "interactivesolutions\\honeycombpages\\app\\forms\\HCPagesForm",
+        "categories": "interactivesolutions\\honeycombpages\\app\\forms\\HCCategoriesForm"
+    },
+    "adminMenu": [
+        {
+            "path": "admin\/pages",
+            "translation": "HCPages::pages.page_title",
+            "icon": "fa-book",
+            "aclPermission": "interactivesolutions_honeycomb_pages_pages_list"
+        }
+    ],
+    "acl": {
+        "permissions": [
+            {
+                "name": "admin.pages",
+                "controller": "interactivesolutions\\honeycombpages\\app\\http\\controllers\\HCPagesController",
+                "actions": [
+                    "interactivesolutions_honeycomb_pages_pages_list",
+                    "interactivesolutions_honeycomb_pages_pages_create",
+                    "interactivesolutions_honeycomb_pages_pages_update",
+                    "interactivesolutions_honeycomb_pages_pages_delete",
+                    "interactivesolutions_honeycomb_pages_pages_force_delete"
+                ]
+            },
+            {
+                "name": "admin.categories",
+                "controller": "interactivesolutions\\honeycombpages\\app\\http\\controllers\\HCCategoriesController",
+                "actions": [
+                    "interactivesolutions_honeycomb_pages_categories_list",
+                    "interactivesolutions_honeycomb_pages_categories_create",
+                    "interactivesolutions_honeycomb_pages_categories_update",
+                    "interactivesolutions_honeycomb_pages_categories_delete",
+                    "interactivesolutions_honeycomb_pages_categories_force_delete"
+                ]
+            }
+        ],
+        "rolesActions": {
+            "project-admin": [
+                "interactivesolutions_honeycomb_pages_pages_list",
+                "interactivesolutions_honeycomb_pages_pages_create",
+                "interactivesolutions_honeycomb_pages_pages_update",
+                "interactivesolutions_honeycomb_pages_pages_delete",
+                "interactivesolutions_honeycomb_pages_categories_list",
+                "interactivesolutions_honeycomb_pages_categories_create",
+                "interactivesolutions_honeycomb_pages_categories_update",
+                "interactivesolutions_honeycomb_pages_categories_delete"
+            ]
+        }
+    }
+}

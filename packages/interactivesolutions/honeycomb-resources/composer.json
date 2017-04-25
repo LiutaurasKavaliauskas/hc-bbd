@@ -1,0 +1,37 @@
+{
+    "name": "interactivesolutions/honeycomb-resources",
+    "description": "HoneyComb CMS package for processing resources",
+    "keywords": [
+        "honeycomb",
+        "honey",
+        "laravel",
+        "resource",
+        "resources"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mantas Gelčius",
+            "email": "mantas.gelcius@gmail.com"
+        },
+        {
+            "name": "Liutauras Kavaliauskas",
+            "email": "liutauraskav@gmail.com"
+        },
+        {
+            "name": "Jevgenij Dmitrijev",
+            "email": "jd@interactivesolutions.lt"
+        }
+    ],
+    "repositories": [],
+    "require": {
+        "php": ">=7.0.0",
+        "laravel/framework": "5.3.*",
+        "intervention/image": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "interactivesolutions\\honeycombresources\\": "src/"
+        }
+    }
+}

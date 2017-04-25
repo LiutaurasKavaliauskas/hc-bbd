@@ -1,0 +1,55 @@
+{
+    "general": {
+        "serviceProviderNameSpace": "HCPosts"
+    },
+    "formData": {
+        "posts": "interactivesolutions\\honeycombposts\\app\\forms\\HCPostsForm",
+        "posts-categories": "interactivesolutions\\honeycombposts\\app\\forms\\posts\\HCPostsCategoriesForm"
+    },
+    "adminMenu": [
+        {
+            "path": "admin\/posts",
+            "translation": "HCPosts::posts.page_title",
+            "icon": "fa-clipboard",
+            "aclPermission": "interactivesolutions_honeycomb_posts_posts_list"
+        }
+    ],
+    "acl": {
+        "permissions": [
+            {
+                "name": "admin.posts",
+                "controller": "interactivesolutions\\honeycombposts\\app\\http\\controllers\\HCPostsController",
+                "actions": [
+                    "interactivesolutions_honeycomb_posts_posts_list",
+                    "interactivesolutions_honeycomb_posts_posts_create",
+                    "interactivesolutions_honeycomb_posts_posts_update",
+                    "interactivesolutions_honeycomb_posts_posts_delete",
+                    "interactivesolutions_honeycomb_posts_posts_force_delete"
+                ]
+            },
+            {
+                "name": "admin.posts.categories",
+                "controller": "interactivesolutions\\honeycombposts\\app\\http\\controllers\\posts\\HCPostsCategoriesController",
+                "actions": [
+                    "interactivesolutions_honeycomb_posts_posts_categories_list",
+                    "interactivesolutions_honeycomb_posts_posts_categories_create",
+                    "interactivesolutions_honeycomb_posts_posts_categories_update",
+                    "interactivesolutions_honeycomb_posts_posts_categories_delete",
+                    "interactivesolutions_honeycomb_posts_posts_categories_force_delete"
+                ]
+            }
+        ],
+        "rolesActions": {
+            "project-admin": [
+                "interactivesolutions_honeycomb_posts_posts_list",
+                "interactivesolutions_honeycomb_posts_posts_create",
+                "interactivesolutions_honeycomb_posts_posts_update",
+                "interactivesolutions_honeycomb_posts_posts_delete",
+                "interactivesolutions_honeycomb_posts_posts_categories_list",
+                "interactivesolutions_honeycomb_posts_posts_categories_create",
+                "interactivesolutions_honeycomb_posts_posts_categories_update",
+                "interactivesolutions_honeycomb_posts_posts_categories_delete"
+            ]
+        }
+    }
+}

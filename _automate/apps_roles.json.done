@@ -1,0 +1,24 @@
+{
+    "directory":"interactivesolutions/honeycomb-apps",
+    "serviceURL":"apps/roles",
+    "serviceName":"Roles",
+    "serviceIcon":"fa-puzzle-piece",
+    "generateMigrations":1,
+    "multiLanguage":0,
+    "database":
+    [
+        {
+            "tableName":"hc_apps_acl_roles",
+            "modelName":"Roles",
+            "default":1
+        },
+        {
+            "tableName":"hc_apps_acl_roles_permissions_connections",
+            "modelName":"RolesPermissionsConnections"
+        },
+        {
+            "tableName":"hc_apps_acl_apps_roles_connections",
+            "modelName":"AppsRolesConnections"
+        }
+    ]
+}
