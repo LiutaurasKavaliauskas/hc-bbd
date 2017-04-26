@@ -12,4 +12,5 @@ return [
     'images' => 'Images',
     'gallery' => 'Gallery',
     'index' => 'Index',
+    'core.button.register' => 'Register',
 ];

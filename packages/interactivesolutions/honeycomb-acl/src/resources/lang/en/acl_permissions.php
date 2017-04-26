@@ -8,5 +8,6 @@ return [
     'name'       => 'Name',
     'controller' => 'Controller',
     'action'     => 'Action',
-    'page_title' => 'Permissions'
+    'page_title' => 'Permissions',
+    'role'       => 'Role name'
 ];

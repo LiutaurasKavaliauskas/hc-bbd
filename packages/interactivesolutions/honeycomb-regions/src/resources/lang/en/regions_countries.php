@@ -18,4 +18,5 @@ return [
     'language_id'       => 'Language id',
     'official'          => 'Official',
     'region'            => 'Continent',
+    'languages'         => 'Languages',
 ];

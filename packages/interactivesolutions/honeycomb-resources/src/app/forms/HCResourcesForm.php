@@ -20,13 +20,6 @@ class HCResourcesForm
     {
         $form = [
             'storageURL' => route ('admin.api.resources'),
-            'buttons'    => [
-                [
-                    "class" => "col-centered",
-                    "label" => trans ('HCCoreUI::core.button.submit'),
-                    "type"  => "submit",
-                ],
-            ],
             'structure'  => [[
                 "type"            => "resource",
                 "fieldID"         => "resource",

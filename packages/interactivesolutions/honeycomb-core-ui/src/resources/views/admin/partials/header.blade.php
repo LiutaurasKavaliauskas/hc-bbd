@@ -2,7 +2,7 @@
 <header class="main-header">
 
     <!-- Logo -->
-    <a href="{{ route('admin.index') }}" class="logo">{{ settings('project_name') }}</a>
+    <a href="{{ route('admin.index') }}" class="logo">{{ trans('HCCoreUI::core.administration') }}</a>
 
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top" role="navigation">

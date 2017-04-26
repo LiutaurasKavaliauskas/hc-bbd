@@ -10,5 +10,7 @@ return [
     'safe_name'     => 'Safe name',
     'size'          => 'Size',
     'path'          => 'Path',
+    'image'         => 'Image',
+    'resource'      => 'Resource'
 
 ];

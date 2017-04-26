@@ -188,7 +188,7 @@ if (!function_exists ('addAllOptionToDropDownList')) {
      */
     function addAllOptionToDropDownList (array $fieldData)
     {
-        array_unshift ($fieldData['options'], ['id' => '', $fieldData['showNodes'][0] => trans ('HCTranslations::core.all')]);
+        array_unshift ($fieldData['options'], ['id' => '', $fieldData['showNodes'][0] => trans ('HCCoreUI::core.all')]);
 
         return $fieldData;
     }

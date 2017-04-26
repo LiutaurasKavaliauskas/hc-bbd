@@ -55,9 +55,9 @@ class HCPagesController extends HCBaseController
     public function getAdminListHeader()
     {
         return [
-            'author_id'                          => [
+            'users.email'                          => [
                 "type"  => "text",
-                "label" => trans('HCPages::pages.author_id'),
+                "label" => trans('HCPages::pages.author'),
             ],
             'publish_at'                         => [
                 "type"  => "text",
@@ -66,10 +66,6 @@ class HCPagesController extends HCBaseController
             'expires_at'                         => [
                 "type"  => "text",
                 "label" => trans('HCPages::pages.expires_at'),
-            ],
-            'cover_photo_id'                     => [
-                "type"  => "text",
-                "label" => trans('HCPages::pages.cover_photo_id'),
             ],
             'translations.{lang}.title'          => [
                 "type"  => "text",
@@ -83,27 +79,6 @@ class HCPagesController extends HCBaseController
                 "type"  => "text",
                 "label" => trans('HCPages::pages.summary'),
             ],
-            'translations.{lang}.content'        => [
-                "type"  => "text",
-                "label" => trans('HCPages::pages.content'),
-            ],
-            'translations.{lang}.cover_photo_id' => [
-                "type"  => "text",
-                "label" => trans('HCPages::pages.cover_photo_id'),
-            ],
-            'translations.{lang}.author_id'      => [
-                "type"  => "text",
-                "label" => trans('HCPages::pages.author_id'),
-            ],
-            'translations.{lang}.publish_at'     => [
-                "type"  => "text",
-                "label" => trans('HCPages::pages.publish_at'),
-            ],
-            'translations.{lang}.expires_at'     => [
-                "type"  => "text",
-                "label" => trans('HCPages::pages.expires_at'),
-            ],
-
         ];
     }
 
@@ -201,7 +176,7 @@ class HCPagesController extends HCBaseController
      */
     public function createQuery(array $select = null)
     {
-        $with = ['translations'];
+        $with = ['translations', 'users'];
 
         if ($select == null)
             $select = HCPages::getFillableFields();

@@ -1,6 +1,7 @@
 <?php namespace interactivesolutions\honeycombapps\app\http\controllers\apps;
 
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Redirect;
 use interactivesolutions\honeycombapps\app\models\apps\HCAppsTokens;
 use interactivesolutions\honeycombapps\app\validators\apps\HCAppsTokensValidator;
 use interactivesolutions\honeycombcore\http\controllers\HCBaseController;
@@ -10,6 +11,10 @@ class HCAppsTokensController extends HCBaseController
 
     //TODO recordsPerPage setting
 
+    public function bandymas()
+    {
+        return Redirect::to('/api/v1/apps')->header('Hc-Token', 'aaa');
+    }
     /**
      * Returning configured admin view
      *

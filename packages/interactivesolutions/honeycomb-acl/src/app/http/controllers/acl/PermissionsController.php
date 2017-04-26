@@ -36,6 +36,10 @@ class PermissionsController extends HCBaseController
     public function getAdminListHeader()
     {
         return [
+            'roles.0.name'       => [
+                "type"  => "text",
+                "label" => trans('HCACL::acl_permissions.role'),
+            ],
             'name'       => [
                 "type"  => "text",
                 "label" => trans('HCACL::acl_permissions.name'),
@@ -59,7 +63,7 @@ class PermissionsController extends HCBaseController
      */
     public function createQuery(array $select = null)
     {
-        $with = [];
+        $with = ['roles'];
 
         if ($select == null)
             $select = Permissions::getFillableFields();

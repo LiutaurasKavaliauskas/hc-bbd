@@ -54,9 +54,9 @@ class HCPostsController extends HCBaseController
     public function getAdminListHeader()
     {
         return [
-            'author_id'                          => [
+            'users.email'                          => [
                 "type"  => "text",
-                "label" => trans('HCPosts::posts.author_id'),
+                "label" => trans('HCPosts::posts.author'),
             ],
             'publish_at'                         => [
                 "type"  => "text",
@@ -65,10 +65,6 @@ class HCPostsController extends HCBaseController
             'expires_at'                         => [
                 "type"  => "text",
                 "label" => trans('HCPosts::posts.expires_at'),
-            ],
-            'cover_photo_id'                     => [
-                "type"  => "text",
-                "label" => trans('HCPosts::posts.cover_photo_id'),
             ],
             'translations.{lang}.title'          => [
                 "type"  => "text",
@@ -86,23 +82,6 @@ class HCPostsController extends HCBaseController
                 "type"  => "text",
                 "label" => trans('HCPosts::posts.content'),
             ],
-            'translations.{lang}.cover_photo_id' => [
-                "type"  => "text",
-                "label" => trans('HCPosts::posts.cover_photo_id'),
-            ],
-            'translations.{lang}.author_id'      => [
-                "type"  => "text",
-                "label" => trans('HCPosts::posts.author_id'),
-            ],
-            'translations.{lang}.publish_at'     => [
-                "type"  => "text",
-                "label" => trans('HCPosts::posts.publish_at'),
-            ],
-            'translations.{lang}.expires_at'     => [
-                "type"  => "text",
-                "label" => trans('HCPosts::posts.expires_at'),
-            ],
-
         ];
     }
 
@@ -202,7 +181,7 @@ class HCPostsController extends HCBaseController
      */
     public function createQuery(array $select = null)
     {
-        $with = ['translations'];
+        $with = ['translations', 'users'];
 
         if ($select == null)
             $select = HCPosts::getFillableFields();

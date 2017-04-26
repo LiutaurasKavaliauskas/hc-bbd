@@ -58,7 +58,7 @@ class HCResourcesController extends HCBaseController
             ],
             'id'         => [
                 "type"    => "image",
-                "label"   => trans('HCResources::resources.dsaflhsalk'),
+                "label"   => trans('HCResources::resources.image'),
                 "options" => [
                     "w" => 100,
                     "h" => 100

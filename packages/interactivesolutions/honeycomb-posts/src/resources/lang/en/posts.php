@@ -9,9 +9,7 @@ return [
     'slug'           => 'Slug',
     'summary'        => 'Summary',
     'content'        => 'Content',
-    'cover_photo_id' => 'Cover photo id',
-    'author_id'      => 'Author id',
-    'publish_at'     => 'Publish at',
-    'expires_at'     => 'Expires at',
+    'type'           => 'Type',
+    'author'         => 'Author'
 
 ];

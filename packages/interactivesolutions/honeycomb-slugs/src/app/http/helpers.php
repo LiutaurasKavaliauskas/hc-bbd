@@ -15,6 +15,8 @@ if (!function_exists('generateHCSlug')) {
     {
         $slug = str_slug($string, $separator);
 
+        //TODO check if $path has '/' on both sides
+
         if(substr($path, -1) != '/')
             $path .= '/';
 

@@ -40,7 +40,7 @@ class HCUsers extends HCUuidModel implements AuthenticatableContract, Authorizab
     /**
      * Update last login timestamp
      *
-     * @param null $time
+     * @param null|string $time
      */
     public function updateLastLogin( string $time = null)
     {
@@ -53,7 +53,7 @@ class HCUsers extends HCUuidModel implements AuthenticatableContract, Authorizab
     /**
      * Update last activity timestamp
      *
-     * @param null $time
+     * @param null|string $time
      */
     public function updateLastActivity( string $time = null)
     {

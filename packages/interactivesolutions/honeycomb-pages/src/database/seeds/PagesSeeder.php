@@ -12,8 +12,10 @@ class PagesSeeder extends Seeder
 {
     public function run()
     {
-        $image = new HCUploadController();
-        $location = __DIR__ . '/../../app/commands/templates/images/dereva.jpg';
-        $image->downloadResource($location, true, 'dereva.jpg', 'image/jpg');
+        if(HCResources::where('id', 'dereva.jpg')->first() == null) {
+            $image = new HCUploadController();
+            $location = __DIR__ . '/../../app/commands/templates/images/dereva.jpg';
+            $image->downloadResource($location, true, 'dereva.jpg', 'image/jpg');
+        }
     }
 }

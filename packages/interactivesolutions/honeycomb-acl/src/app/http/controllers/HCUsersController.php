@@ -49,6 +49,14 @@ class HCUsersController extends HCBaseController
     public function getAdminListHeader ()
     {
         return [
+            'email'   => [
+                "type"  => "text",
+                "label" => trans ('HCACL::users.email'),
+            ],
+            'roles.0.name'   => [
+                "type"  => "text",
+                "label" => trans ('HCACL::users.role'),
+            ],
             'activated_at'   => [
                 "type"  => "text",
                 "label" => trans ('HCACL::users.activated_at'),
@@ -56,10 +64,6 @@ class HCUsersController extends HCBaseController
             'last_login'     => [
                 "type"  => "text",
                 "label" => trans ('HCACL::users.last_login'),
-            ],
-            'last_visited'   => [
-                "type"  => "text",
-                "label" => trans ('HCACL::users.last_visited'),
             ],
             'last_activity'  => [
                 "type"  => "text",
@@ -149,7 +153,7 @@ class HCUsersController extends HCBaseController
      */
     public function createQuery(array $select = null)
     {
-        $with = [];
+        $with = ['roles'];
 
         if ($select == null)
             $select = HCUsers::getFillableFields();
