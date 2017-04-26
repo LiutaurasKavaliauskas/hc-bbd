@@ -44,7 +44,7 @@
                                 {{ trans($item['listTranslation']) }}
                             @else
                                 <i class="fa fa-list-ul fa-fw"></i>
-                                {{ trans('HCTranslations::core.list') }}
+                                {{ trans('HCCoreUI::core.list') }}
                             @endif
                         </a>
                     </li>

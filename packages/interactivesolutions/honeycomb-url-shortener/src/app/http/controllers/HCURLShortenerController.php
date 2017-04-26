@@ -68,7 +68,7 @@ class HCURLShortenerController extends HCBaseController
     /**
      * Create item
      *
-     * @param array|null $data
+     * @param null $data
      * @return mixed
      */
     protected function __create(array $data = null)

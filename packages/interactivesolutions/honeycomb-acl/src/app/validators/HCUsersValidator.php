@@ -12,8 +12,8 @@ class HCUsersValidator extends HCCoreFormValidator
     protected function rules ()
     {
         return [
-            'email'    => 'required',
-            'password' => 'required',
+            'email'    => 'email|required',
+            'password' => 'required|min:8',
         ];
     }
 }
