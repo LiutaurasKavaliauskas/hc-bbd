@@ -18,6 +18,13 @@ trait UserRoles
         return $this->belongsToMany(Roles::class, RolesUsersConnections::getTableName(), 'user_id', 'role_id')->withTimestamps();
     }
 
+    public function roleToUser(array $data = null)
+    {
+        if (is_null ($data))
+            abort(400, "No data input");
+        RolesUsersConnections::create (['user_id' => $this->id, 'role_id' => $data['roles']['role_id']]);
+    }
+
     /**
      * Assign the given role to the user.
      *
