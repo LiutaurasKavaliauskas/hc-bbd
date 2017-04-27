@@ -17,11 +17,18 @@ return [
     'password'       => 'Password',
     'phone'          => 'Phone',
     'page_title'     => 'Users',
+<<<<<<< HEAD
     'role'           => 'Role',
     'login'          => [
     'title'    => 'Login',
     'register' => 'Register',
 ],
+=======
+    'login'          => [
+        'title'    => 'Login',
+        'register' => 'Register',
+    ],
+>>>>>>> origin/master
 
     'errors' =>
         [

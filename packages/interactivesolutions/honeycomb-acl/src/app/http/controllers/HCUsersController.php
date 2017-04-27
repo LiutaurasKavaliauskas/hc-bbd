@@ -1,7 +1,10 @@
 <?php namespace interactivesolutions\honeycombacl\app\http\controllers;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Hash;
+use interactivesolutions\honeycombacl\app\models\acl\RolesUsersConnections;
+use interactivesolutions\honeycombacl\app\models\traits\UserRoles;
 use interactivesolutions\honeycombacl\app\validators\HCUsersValidator;
 use interactivesolutions\honeycombcore\http\controllers\HCBaseController;
 use interactivesolutions\honeycombacl\app\models\HCUsers;
@@ -52,12 +55,19 @@ class HCUsersController extends HCBaseController
             'email'   => [
                 "type"  => "text",
                 "label" => trans ('HCACL::users.email'),
+<<<<<<< HEAD
             ],
             'roles.0.name'   => [
                 "type"  => "text",
                 "label" => trans ('HCACL::users.role'),
             ],
             'activated_at'   => [
+=======
+            ],'roles.0.name'   => [
+                "type"  => "text",
+                "label" => trans ('HCACL::acl_roles.name'),
+            ],'activated_at'   => [
+>>>>>>> origin/master
                 "type"  => "text",
                 "label" => trans ('HCACL::users.activated_at'),
             ],
@@ -86,9 +96,7 @@ class HCUsersController extends HCBaseController
         (new HCUsersValidator())->validateForm ();
 
         $record = HCUsers::create (array_get ($data, 'record'));
-
-        //TODO roleUser only
-        $record->roleSuperAdmin();
+        $record->roleToUser($data);
 
         return $this->getSingleRecord ($record->id);
     }
@@ -105,9 +113,15 @@ class HCUsersController extends HCBaseController
 
         //TODO read request parameters only once fo getting data and validating it
         $data = $this->getInputData ();
-        (new HCUsersValidator())->validateForm ();
+        if(isset($data['record']['password'])) {
+            (new HCUsersValidator())->validateForm();
+        }
 
         $record->update (array_get ($data, 'record'));
+
+        $recordRoles = RolesUsersConnections::where('user_id',$id);
+        $recordRoles->update(['role_id' => $data['roles']['role_id']]);
+
 
         return $this->getSingleRecord ($record->id);
     }
@@ -208,7 +222,17 @@ class HCUsersController extends HCBaseController
         $_data = request ()->all ();
 
         array_set ($data, 'record.email', array_get ($_data, 'email'));
-        array_set ($data, 'record.password', Hash::make (array_get ($_data, 'password')));
+        array_set ($data, 'roles.role_id', array_get ($_data, 'role_id'));
+
+        if($_data['password']){
+            array_set ($data, 'record.password', Hash::make (array_get ($_data, 'password')));
+        }
+
+        if(isset($_data['active']) && $_data['active'][0] == 1) {
+            array_set($data, 'record.activated_at', Carbon::now());
+        }else{
+            array_set($data, 'record.activated_at', null);
+        }
 
         return $data;
     }
@@ -221,7 +245,7 @@ class HCUsersController extends HCBaseController
      */
     public function getSingleRecord (string $id)
     {
-        $with = [];
+        $with = ['roles'];
 
         $select = HCUsers::getFillableFields ();
 
